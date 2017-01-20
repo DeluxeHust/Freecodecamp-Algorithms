@@ -1,0 +1,485 @@
+
+
+------------------- HTML + CSS -----------------------
+
+
+1. Change the Color of Text:
+	<p Color=red> Phan Hong Linh. </p>
+
+------------------------------------------------------
+2. USE CSS 
+	<style>
+  		h2 {color: blue;}
+	</style>
+------------------------------------------------------
+3.  USE CSS TO CHANGE
+
+	<style>
+  		.red-text {
+    	color:  red;
+  		}
+	</style>
+
+	<h2 class="red-text">CatPhotoApp</h2>
+
+------------------------------------------------------
+4. Change the Font Size of an Element
+
+	<style>
+  		.red-text {
+    	color: red;
+  		}
+  	p {
+    	font-size: 16px; 
+  		}
+	</style>
+
+------------------------------------------------------
+5. Set the Font Family of an Element
+
+ Giúp cài đặt 1 font chữ.
+ 	<style>
+  	p {
+    	font-size: 16px;
+    	font-family: Monospace;
+  	   }
+  	</style>
+
+ ---------------------------
+6. Import a Google Font
+ 	
+ 	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+   	h2 {
+    	font-family: Lobster;
+  	}
+  Phông này là phông nhìn khá đẹp.
+  
+------------------------------------------------------
+7. GIẢM CẤP FONT
+  Có 3 font cơ bản trong trình duyệt: Monospace, Serif and Sans-Serif
+  nếu ko có font tương ứng thì sẽ chuyển sang 3 loại font này.
+
+------------------------------------------------------
+8. Add Images to your Website
+  
+  	<img src="https://www.your-image-source.com/your-image.jpg" alt="Author standing on a beach with two thumbs up. ">
+  	Thuộc tính alt để khi trỏ vào hình sẽ thấy.
+
+------------------------------------------------------
+9. Size your Images
+  
+ Dùng thuộc tính width:
+  	<style>
+  		.larger-image {
+    	width: 500px;
+  	}
+	</style>
+
+------------------------------------------------------
+10. Add Borders Around your Elements
+
+ CSS borders have properties like style, color and width
+ For example, if we wanted to create a red, 5 pixel border around an HTML element, we could use this class:
+
+	<style>
+  		.thin-red-border {
+    	border-color: red;
+    	border-width: 5px;
+    	border-style: solid;
+  		}
+	</style>
+
+------------------------------------------------------
+11. Add Rounded Corners with a Border Radius 
+
+ (Làm viền 4 góc mượt hơn)
+ Dùng border-radius
+	<style>
+  		.thick-green-border {
+    	border-color: green;
+    	border-width: 10px;
+     	border-style: solid;
+    	border-radius: 10px;
+ 	</style>
+
+------------------------------------------------------
+12. Make Circular Images with a Border Radius
+
+ Ảnh ở trong hình trong (do viền 4 góc bẻ cong quá mức)
+ In addition to pixels, you can also specify a border-radius using a percentage.
+ Give your cat photo a border-radius of 50%.
+	<style>
+  		.thick-green-border {
+    	border-color: green;
+    	border-width: 10px;
+    	border-style: solid;
+    	border-radius: 50%;
+ 	</style>
+
+------------------------------------------------------
+13. Link
+ 
+ 	<p>Here's a <a href="http://freecodecamp.com"> link to Free Code Camp</a> for you to follow.</p>
+
+------------------------------------------------------
+14. Make Dead Links using the Hash Symbol
+ 
+ Sử dụng link khi chưa biết link tới đâu dùng #
+
+ 	<p>Click here for <a href="#">cat photos </a> </p>
+
+------------------------------------------------------
+15. Turn an Image into a Link 
+	(Dùng ảnh làm 1 đường link. ở đây đang cho deadlink)
+
+	<p><a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat"> </a>.</p>
+
+------------------------------------------------------
+16. LisT
+
+ - Danh sách không sắp xếp:
+	<ul>
+ 		<li> Linh Phan </li>
+  		<li> Autumn Page </li>
+  		<li> Deluxe </li>
+	</ul>
+
+ - Danh sách sắp xếp, đánh số.
+  	<ol>
+    	<li> Mouse </li>
+    	<li> Sleep </li>
+    	<li> Fish </li>
+  	</ol>
+
+------------------------------------------------------
+17. Create a Text Field
+  	<input type="text">
+
+ - Tạo thêm chữ trong text.
+ 	<input type="text" placeholder="cat photo URL">
+
+------------------------------------------------------
+18. Create a Form Element
+
+ You can build web forms that actually submit data to a server using nothing more than pure HTML. 
+ You can do this by specifying an action on your form element.
+
+ For example: 
+
+	<form action="/url-where-you-want-to-submit-form-data"></form>
+
+ - Add a Submit Button to a Form: 
+
+	<form action="/submit-cat-photo">
+  		<input type="text" placeholder="Input here">
+  		<button type="submit">Submit</button>
+	</form>
+
+------------------------------------------------------
+19. Use HTML5 to Require a Field
+
+ You can require specific form fields so that your user will not be able to submit your form until he or she has filled them out.
+ For example, if you wanted to make a text input field required, you can just add the word required within your input element, \
+ you would use: <input type="text" required>
+ Example: 
+	<form action="/submit-cat-photo">
+  		<input type="text" placeholder="cat photo URL" required>
+  		<button type="submit">Submit</button>
+	</form>
+
+------------------------------------------------------
+20. Create a Set of Radio Buttons/ Check box ( Tạo lựa chọn)
+
+ -Radio Buttons:
+ You can use radio buttons for questions where you want the user to only give you one answer.
+ Radio buttons are a type of input
+ Each of your radio buttons should be nested within its own label element.
+ All related radio buttons should have the same name attribute.
+ Here's an example of a radio button:
+ 	
+ 	<label><input type="radio" name="indoor-outdoor"> Indoor</label>
+
+ Example: Chọn Indoor or Outdoor:
+	<label><input type="radio" name="indoor-outdoor"> Indoor</label>
+	<label><input type="radio" name="indoor-outdoor"> Outdoor</label>
+
+ - Create a Set of Checkboxes:
+	<label> <input type="checkbox" name="personality"> Loving </label>
+	<label> <input type="checkbox" name="personality"> Hate </label>
+ 
+ - Tạo checkbox, radio mặc định: Thêm checked
+	<input type="radio" name="test-name" checked>
+
+------------------------------------------------------
+21. Nest Many Elements within a Single Div Element
+
+ The div element, also known as a division element, is a general purpose container for other elements.
+ The div element is probably the most commonly used HTML element of all. 
+ It's useful for passing the CSS of its own class declarations down to all the elements that it contains.
+ Just like any other non-self-closing element,  
+ you can open a div element with <div> and close it on another line with </div>.
+
+------------------------------------------------------
+22. Give a Background Color to a Div Element
+
+	<style>
+		.green-background {
+  		background-color: green;
+		}
+	</style>
+	<div class="green-background"> abcxyx </div>
+
+------------------------------------------------------
+23. Set the ID of an Element
+
+ In addition to classes, each HTML element can also have an id attribute.
+ There are several benefits to using id attributes, and you'll learn more about them once you start using jQuery.
+ id attributes should be unique. Browsers won't enforce this, but it is a widely agreed upon best practice. 
+ So please don't give more than one element the same id attribute.
+ Here's an example of how you give your h2 element the id of cat-photo-app:
+	
+	<h2 id="cat-photo-app">
+
+------------------------------------------------------
+24. Use an ID Attribute to Style an Element
+
+ One cool thing about id attributes is that, like classes, you can style them using CSS.
+ Here's an example of how you can take your element with the id attribute of cat-photo-element and give it the background color of green. 
+ In your style element:
+
+	<style>
+		#cat-photo-form {
+  		background-color: green;
+		}
+ 	</style>
+
+	<form action="/submit-cat-photo" id="cat-photo-form" >
+
+------------------------------------------------------
+25. Adjusting the Padding/margin of an Element
+
+ Three important properties control the space that surrounds each HTML element: padding, margin, and border.
+ An element's padding controls the amount of space between the element's content and its border.
+ An element's margin controls the amount of space between an element's border and surrounding elements.
+ Tạo Pađing (Nhồi vào bên trong) và margin (Căn lề bên ngoài)
+
+ - Instead of specifying an element's padding-top, padding-right, padding-bottom, and padding-left properties, you can specify them all in one line, like this:
+ padding: 10px 20px 10px 20px;
+ Margin tương tự padding
+
+ 	<style>
+  		.green-box {
+    	background-color: green;
+    	padding: 20px;
+    	margin: 20px;
+  		}
+    	.red-box {
+    	background-color: green;
+    	padding-top: 40px;
+    	padding-right: 20px;
+    	padding-bottom: 20px;
+    	padding-left: 40px;
+  		}
+    	.yellow-box {
+    	background-color: yellow;
+    	padding: 20px 40px 20px 40px;
+  		}
+
+  	</style>
+------------------------------------------------------
+26. Inherit Styles from the Body Element (Thừa hưởng Styles từ thuộc tính Body)
+
+	<style>
+  		body {
+    		background-color: black;
+    		color: green;
+    		font-family: Monospace;
+  		}
+
+	</style>
+
+	<h1> Hello World </h1>
+ - Khi đó Dòng "Hello world" sẽ có màu xanh vì nằm trong body.
+
+------------------------------------------------------
+27. Thứ tự ưu tiên:
+
+	<style>
+  		body {
+    		background-color: black;
+    		font-family: Monospace;
+    		color: green;
+  		}
+  		#orange-text {
+    		color: orange;
+  		}
+  		.pink-text {
+    		color: pink !important;
+  		}
+  		.blue-text {
+    		color: blue;
+  		}
+	</style>
+
+	<h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
+
+
+ - Dòng chữ ưu tiên color: pink !inportant -> style="color:white" -> id="orange-text" -> class="Blue-text"  -> class="pink-text" -> style color= "green"
+ => Hiện màu hồng.
+
+------------------------------------------------------
+28. Use Responsive Design with Bootstrap Fluid Containers 
+
+ Bootstrap will figure out how wide your screen is and respond by resizing your HTML elements - hence the name Responsive Design.
+ With responsive design, there is no need to design a mobile version of your website. It will look good on devices with screens of any width.
+
+ - Sử dụng Bootstrap thì thêm link: 
+ 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+ Thêm class "container-fluid"
+ 	<div class = "container-fluid">
+
+ - Make Images Mobile Responsive: 
+ 	<img class="img-responsive" src="https://bit.ly/fcc-running-cats" alt= "3 cat">
+
+ => ảnh sẽ tự động vừa màn hình khi thêm class="img-responsive"
+
+ - we're using Bootstrap, we can center our heading element to make it look better: 
+  	<h2 class="red-text text-center">your text</h2>
+  	=> your text được căn giữa.
+
+------------------------------------------------------
+29. Create a Bootstrap Button
+ Create a new button element below your large kitten photo. Give it the class btn and the text of "Like": 
+ 	<button class="btn"> Like </button> 
+   	=> Nút khá là đẹp
+
+ - This button would take up 100% of the available width.
+  Khi class là "btn-block" nó sẽ dãn ra ngang màn hình.
+   	<button class="btn btn-block">Submit</button> 
+
+ - Khi thêm class là btn-primary thì nó đổi màu cho nổi bật.
+ The btn-primary class is the main color you'll use in your app. 
+ It is useful for highlighting actions you want your user to take.
+	<button class="btn btn-block btn-primary">Like</button>
+
+ - Call out Optional Actions with Button Info 
+ Bootstrap comes with several pre-defined colors for buttons. 
+ The btn-info class is used to call attention to optional actions that the user can take.
+	<button class="btn btn-block btn-info">Info</button>
+
+ - Warn your Users of a Dangerous Action 
+ Bootstrap comes with several pre-defined colors for buttons. 
+ The btn-danger class is the button color you'll use to notify users that the button performs a destructive action, 
+ such as deleting a cat photo.
+	<button class="btn btn-block btn-danger">Delete</button>
+	Màu đỏ. 
+
+------------------------------------------------------
+30. Use the Bootstrap Grid to Put Elements Side By Side Đặt các thẻ theo hàng.
+ - có 12 col-md-* chia thành các cột. md: medium. Sử dụng khi hiển thị trên màn hình destop,..
+ - xs: Extra small, sử dụng trên màn hình điện thoại,...
+
+ Note that in this illustration, the col-md-* class is being used. 
+ Here, md means medium, and * is a number specifying how many columns wide the element should be. 
+ In this case, the column width of an element on a medium-sized screen, such as a laptop, is being specified.
+
+ In the Cat Photo App that we're building, we'll use col-xs-*, where xs means extra small (like an extra-small mobile phone screen), and * is the number of columns specifying how many columns wide the element should be.
+ 	<div class="row">
+    	<div class="col-xs-4">
+      		<button class="btn btn-block btn-primary">Like</button>
+    	</div>
+    	<div class="col-xs-4">
+      		<button class="btn btn-block btn-info">Info</button>
+    	</div>
+    	<div class="col-xs-4">
+      		<button class="btn btn-block btn-danger">Delete</button>
+   		</div>
+ 	</div>
+=> chia thành 3 cột Like, Info, Delete.
+
+------------------------------------------------------
+31. Use Bootstrap chỉnh kích thước ảnh, màu chữ nhanh hơn bằng: class : text-primary (chữ màu xanh) , img-responsive (ảnh vừa màn hình)
+ 	
+ 	<h2 class="text-primary text-center">CatPhotoApp</h2>
+
+  	<a href="#"><img class="img-responsive thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back. "></a>
+
+------------------------------------------------------
+32. Use Spans for Inline Elements 
+
+ You can use spans to create inline elements. Remember when we used the btn-block class to make the button fill the entire row?
+ By using the span element, you can put several elements together, and even style different parts of the same element differently.
+ Nest the word "love" in your "Things cats love" element below within a span element. 
+ Then give that span the class text-danger to make the text red.
+ 
+ Thẻ <span> trong HTML thật ra là một thẻ trung hòa, nó không thêm hay bớt bất 
+ cứ một thứ gì vào một tài liệu HTML cả. Nhưng chính nhờ tính chất trung hòa này 
+ mà nó lại là một công cụ đánh dấu tuyệt vời để qua đó chúng ta có thể viết CSS 
+ định dạng cho các phần tử mong muốn. 
+
+ 	<p>Things cats <span class="text-danger"> love: </span> </p>
+
+ 	ở CSS Ta có thể thêm class="text-danger";
+
+------------------------------------------------------
+33. Create a Custom Heading
+ Sử dụng boottrap chia thẻ div thành các cột col-xs-8 và col-xs-4
+
+ 	<div class="container-fluid">
+  		<div class="row">
+    		<div class="col-xs-8">
+  				<h2 class="text-primary text-center">CatPhotoApp</h2>
+    		</div>
+    		<div class="col-xs-4">
+  				<a href="#"><img class="img-responsive thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back. "></a>
+    		</div>
+  		</div>
+  	</div>
+------------------------------------------------------
+34. Add Font Awesome Icons to our Buttons
+ Font Awesome is a convenient library of icons. These icons are vector graphics, stored in the .svg file format. These icons are treated just like fonts. You can specify their size using pixels, and they will assume the font size of their parent HTML elements.
+
+ You can add Font Awesome to any app just by including it by adding the following code to the top of your HTML:
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+
+ Use Font Awesome to add a thumbs-up icon to your like button by giving it an i element with the classes fa and fa-thumbs-up.
+ => Hiện hình nút Like trên Like button.
+ => Hiện Nút Info
+ => Hiện nút thùng rác.
+ Font Awesome là 1 thư viện Icon. :))
+  	<div class="row">
+    	<div class="col-xs-4">
+      		<button class="btn btn-block btn-primary"><i class="fa fa-thumbs-up"></i>Like</button>
+    	</div>
+    	<div class="col-xs-4">
+    	  	<button class="btn btn-block btn-info"><i class="fa fa-info-circle"></i>Info</button>
+    	</div>
+    	<div class="col-xs-4">
+      		<button class="btn btn-block btn-danger"><i class="fa fa-trash"></i>Delete</button>
+      	</div>
+    </div>
+
+ - You can add the fa-paper-plane Font Awesome icon by adding <i class="fa fa-paper-plane"></i> within your submit button element.
+ => Hiện ra máy bay giấy ở nút Submit:
+	<button type="submit"><i class="fa fa-paper-plane"> Submit </i></button>
+
+
+ - Dùng class form-control và class btn btn-primary để vùng text trải rộng ra và nút submit chuyển sang màu xanh (màu chính)
+
+    <input class="form-control" type="text" placeholder="cat photo URL" required>
+    <button class="btn btn-primary" type="submit"><i class=" fa fa-paper-plane"> Submit </i></button>
+
+------------------------------------------------------
+35. Create Bootstrap Wells 
+ 
+ Bootstrap has a class called well that can create a visual sense of depth for your columns.
+ Nest one div element with the class well within each of your col-xs-6 div elements.
+
+------------------------------------------------------
+36. CSS min-height:
+
+  min-height: 100px;
+  
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
